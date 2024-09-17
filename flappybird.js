@@ -1,4 +1,3 @@
-
 let board;
 let boardWidth = 360;
 let boardHeight = 640;
@@ -50,7 +49,7 @@ window.onload = function() {
 
     bottomPipeImg = new Image();
     bottomPipeImg.src = "Images/bottompipe.png";
-
+    
     requestAnimationFrame(update);
     setInterval(placePipes, 1500); 
     document.addEventListener("keydown", moveBird);
@@ -86,12 +85,10 @@ function update() {
         }
     }
 
-    //clear pipes
     while (pipeArray.length > 0 && pipeArray[0].x < -pipeWidth) {
         pipeArray.shift();
     }
 
-    //score
     context.fillStyle = "white";
     context.font="45px sans-serif";
     context.fillText(score, 5, 45);
