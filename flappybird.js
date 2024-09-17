@@ -132,7 +132,6 @@ function moveBird(e) {
    
         velocityY = -6;
 
-
         if (gameOver) {
             bird.y = birdY;
             pipeArray = [];
